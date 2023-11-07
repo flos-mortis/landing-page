@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.circle-1 {
+    width: 43px;
+    height: 43px;
+    &::after {
+        content: "";
+        width: 30px;
+        z-index: 10;
+        height: 30px;
+        border-radius: 50%;
+        background: #00E0FF;
+        filter: blur(7px);
+        position: absolute;
+    }
+}
+
+.main-screen {
+    background: linear-gradient(rgba(2, 35, 53, 1), rgba(4, 58, 65, 1));
+    height: 100vh;
+
+    .main-screen-back {
+        display: flex;
+        .img-neuron {
+            background-image: url(../../public/images/neuron-small.png);
+            margin: auto;
+            width: 33vw;
+            height: 324px;
+        }
+    }
+}
