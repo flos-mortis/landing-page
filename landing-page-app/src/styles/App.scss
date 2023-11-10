@@ -1,5 +1,15 @@
 $color-text: #ffffff;
 
+@font-face {
+    font-family: "AvenirNextCyr-Regular";
+    src: url("../../public/fonts/AvenirNextCyr-Regular.woff");
+}
+
+@font-face {
+    font-family: "AvenirNextCyr-Bold";
+    src: url("../../public/fonts/AvenirNextCyr-Bold.woff");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +17,12 @@ $color-text: #ffffff;
 }
 
 body {
-    font-family: Avenir Next Cyr;
+    font-family: "AvenirNextCyr-Regular";
 }
 
 p {
     color: $color-text;
-    font-size: 18px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 450;
     line-height: normal;
@@ -29,10 +39,9 @@ p {
 }
 
 .container {
-    width: 80%;
+    width: 70%;
     max-width: 1170px;
     margin: auto;
-    
 }
 
 .circle-1 {
@@ -55,7 +64,31 @@ p {
     height: 100vh;
 
     .main-screen {
-        padding-top: 3rem;
+        padding-top: 1.5rem;
+
+        .left-block {
+            align-items: center;
+
+            .icon-bg-1 {
+                background: $color-text;
+                opacity: 0.05;
+                padding: 0.3rem;
+                border-radius: 50%;
+                z-index: 1;
+
+                .icon-bg-2 {
+                    fill: linear-gradient(180deg, rgba(3, 225, 255, 0.66) 0%, #13CDC2 100%);
+                    filter: drop-shadow(0px 7px 20px #00E0FF);
+                    padding: 0.3rem;
+                    border-radius: 50%;
+                    z-index: 5;
+                }
+            }
+
+            p {
+                writing-mode: vertical-rl;
+            }
+        }
 
         header {
             display: flex;
@@ -69,58 +102,67 @@ p {
                 align-items: center;
 
                 p {
-                    margin-left: 10px;
+                    margin-left: 5px;
                 }
             }
         }
         main {
             width: 60%;
-            margin-top: 9rem;
+            margin-top: 10vh;
+
             span {
                 color: #747D81;
-                font-size: 1.125rem;
-                font-style: normal;
+                font-size: 8px;
                 font-weight: 600;
-                line-height: normal;
             }
 
             h1 {
-                font-size: 6rem;
+                font-family: "AvenirNextCyr-Bold";
+                font-size: 45px;
                 background: linear-gradient(180deg, #FFF 31.75%, #1A3031 100%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                margin-bottom: 13px;
+                margin-bottom: 5px;
             }
 
             .guarantee {
-                gap: 33px;
-                margin-top: 5rem;
+                gap: 15px;
+                margin-top: 2.25rem;
+                width: 80%;
+
                 .guarantee-icon {
-                    border-radius: 12px;
-                    border: 1px solid #49B9E8;
+                    border-radius: 5px;
+                    border: 0.5px solid #49B9E8;
                     background: linear-gradient(180deg, rgba(0, 224, 255, 0.11) 0%, rgba(0, 224, 255, 0.05) 100%);
-                    padding: 1rem 1rem 0.75rem;
+                    padding: 7px 7px 1px;
                 }
 
-                span {
-                    color: #00E0FF;
-                    margin-top: 0.75rem;
+                .guarantee-text {
+                    
+                    p {
+                        font-weight: 750;
+                    }
+                    span {
+                        color: #00E0FF;
+                        margin-top: 3px;
+                        font-weight: 450;
+                    }
                 }
             }
 
             .webinar-btn {
-                margin-top: 7rem;
+                margin-top: 2rem;
                 border: none;
-                width: 80%;
-                border-radius: 9px;
+                width: 70%;
+                border-radius: 5px;
                 background: linear-gradient(180deg, rgba(3, 225, 255, 0.66) 0%, #13CDC2 100%);
-                box-shadow: 0px 7px 20px -7px #00E0FF;
+                box-shadow: 0px 7px 10px -7px #00E0FF;
                 color: $color-text;
-                padding: 1.375rem 0.8rem;
-                font-size: 12px;
+                padding: 0.65rem 0.5rem;
                 font-weight: 750;
-                letter-spacing: 3px;
+                font-size: 5px;
+                letter-spacing: 1.5px;
                 text-transform: uppercase;
             }
         }
